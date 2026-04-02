@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import careerGrowthImg from "../../assets/careerGrowthImg.png";
-import supportiveLeadershipImg from "../../assets/SupportiveLeadershipImg.png";
-import continuousLearningImg from "../../assets/continuousLearningImg.png";
-import employeeRecognitionImg from "../../assets/employeeRecognitionImg.png";
-import stableOpportunitiesImg from "../../assets/stableOpportunitiesImg.png";
-import workLifeBalanceImg from "../../assets/workLifeBalanceImg.png";
+import careerGrowthImg from "../../assets/careerGrowthImg.jpg";
+import supportiveLeadershipImg from "../../assets/SupportiveLeadershipImg.jpg";
+import continuousLearningImg from "../../assets/continuousLearningImg.jpg";
+import employeeRecognitionImg from "../../assets/employeeRecognitionImg.jpg";
+import stableOpportunitiesImg from "../../assets/stableOpportunitiesImg.jpg";
+import workLifeBalanceImg from "../../assets/workLifeBalanceImg.jpg";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function WhyJoinCarousel() {
@@ -137,7 +137,7 @@ export default function WhyJoinCarousel() {
         Why Join Callmax PH?
       </h2>
 
-      <div className="max-w-[1300px] mx-auto relative">
+      <div className="max-w-[1000px] mx-auto relative">
 
         {/* ❌ HIDDEN ON MOBILE */}
         {/* LEFT */}
@@ -146,7 +146,7 @@ export default function WhyJoinCarousel() {
           className={`
             hidden md:flex
             absolute top-1/2 -translate-y-1/2 z-50
-            left-0 -translate-x-[100px]
+            left-0 -translate-x-[200px]
             w-16 h-16 items-center justify-center
             cursor-pointer group
             transition-all duration-300
@@ -191,7 +191,7 @@ export default function WhyJoinCarousel() {
           className={`
             hidden md:flex
             absolute top-1/2 -translate-y-1/2 z-50
-            right-0 translate-x-[100px]
+            right-0 translate-x-[200px]
             w-16 h-16 items-center justify-center
             cursor-pointer group
             transition-all duration-300

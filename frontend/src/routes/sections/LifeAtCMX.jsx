@@ -1,4 +1,4 @@
-import lifeAtCMXImg from "../../assets/lifeAtCMXImg.jpeg";
+import lifeAtCMXImg from "../../assets/lifeAtCMXImg.jpg";
 
 export default function LifeAtCMX() {
   return (

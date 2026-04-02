@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Check } from "lucide-react";
-import recruiterImg from "../../assets/Recruiter.png";
+import recruiterImg from "../../assets/Recruiter.jpg";
 
 export default function RecruitmentProcess() {
   const steps = [
