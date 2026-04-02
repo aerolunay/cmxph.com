@@ -19,7 +19,7 @@ export default function Home() {
           <img src={logo} alt="Callmax" className="h-10" />
 
           <div className="flex items-center gap-2">
-            <span className="font-semibold text-xl">Philippines</span>
+            <span className="font-semibold text-lg">Philippines</span>
             <img src={phFlag} alt="PH Flag" className="h-4 w-auto" />
           </div>
 
@@ -32,7 +32,7 @@ export default function Home() {
 
       {/* NAVBAR */}
       <div className="w-full bg-[#2f466f] text-white flex justify-center py-3">
-        <nav className="flex gap-10 text-md font-medium">
+        <nav className="flex gap-10 text-sm font-medium">
           <a href="#life-at-cmx" className="hover:text-blue-300">Life at CMX</a>
           <a href="#why-join-cmx" className="hover:text-blue-300">Why Join CMX?</a>
           <a href="#recruitment-process" className="hover:text-blue-300">Recruitment Process</a>

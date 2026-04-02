@@ -19,7 +19,7 @@ export default function Home() {
           <img src={logo} alt="Callmax" className="h-10" />
 
           <div className="flex items-center gap-2">
-            <span className="font-semibold text-xl">Philippines</span>
+            <span className="font-semibold text-lg">Philippines</span>
             <img src={phFlag} alt="PH Flag" className="h-4 w-auto" />
           </div>
 

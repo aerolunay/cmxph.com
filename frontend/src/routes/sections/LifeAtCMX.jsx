@@ -41,7 +41,7 @@ export default function LifeAtCMX() {
             Life at CMX
           </h2>
 
-          <div className="space-y-4 text-gray-700 text-xl leading-relaxed">
+          <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
             <p>At CMX, work isn’t just about hitting targets—it’s about building a culture where people genuinely thrive.</p>
             <p>We take pride in our diverse and inclusive environment, bringing together talent from different backgrounds, experiences, and perspectives.</p>
             <p>Unlike traditional BPO setups, CMX is designed to be flexible, modern, and people-first—empowering teams with autonomy and creativity.</p>

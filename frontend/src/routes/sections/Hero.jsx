@@ -8,7 +8,7 @@ export default function Hero() {
 
       {/* LEFT */}
       <div className="p-4 min-w-0">
-        <div className="inline-block border border-blue-300 text-blue-600 px-4 py-1 rounded-full text-lg mb-4">
+        <div className="inline-block border border-blue-300 text-blue-600 px-4 py-1 rounded-full md:text-lg mb-4">
           Careers at Callmax Solutions Philippines
         </div>
 
@@ -22,7 +22,7 @@ export default function Hero() {
           With Purpose
         </motion.h1>
 
-        <p className="text-gray-600 text-xl mb-6 max-w-lg">
+        <p className="text-gray-600 text-lg mb-6 max-w-lg">
           Join a team that values growth, innovation, and people-first culture. 
           At Callmax PH, we don’t just offer jobs — we build careers.
         </p>

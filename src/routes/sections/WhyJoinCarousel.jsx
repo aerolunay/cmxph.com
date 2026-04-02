@@ -254,7 +254,7 @@ export default function WhyJoinCarousel() {
             </div>
 
             {/* TEXT */}
-            <div className={`flex justify-center text-xl ${isEven ? "md:order-1" : "md:order-2"}`}>
+            <div className={`flex justify-center text-lg ${isEven ? "md:order-1" : "md:order-2"}`}>
               <div className="max-w-[550px] w-full text-center md:text-left">
                 <AnimatePresence mode="wait">
                   <motion.div

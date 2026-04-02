@@ -51,7 +51,7 @@ const requirementsList = job.job_requirements
 
             <button
               onClick={onClose}
-              className="text-gray-400 hover:text-black text-xl"
+              className="text-gray-400 hover:text-black text-lg"
             >
               ✕
             </button>

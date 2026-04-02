@@ -22,7 +22,7 @@ export default function Hero() {
           With Purpose
         </motion.h1>
 
-        <p className="text-gray-600 text-xl mb-6 max-w-lg">
+        <p className="text-gray-600 text-lg mb-6 max-w-lg">
           Join a team that values growth, innovation, and people-first culture. 
           At Callmax PH, we don’t just offer jobs — we build careers.
         </p>

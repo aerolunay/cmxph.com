@@ -6,7 +6,7 @@ export default function CTASection() {
         Ready to grow your career with us?
       </h2>
 
-      <p className="text-gray-600 text-xl mb-8 max-w-xl mx-auto">
+      <p className="text-gray-600 text-lg mb-8 max-w-xl mx-auto">
         Take the next step and join a team that values your growth, supports your journey, and celebrates your success.
       </p>
 

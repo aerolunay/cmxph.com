@@ -49,7 +49,7 @@ export default function RecruitmentProcess() {
             Recruitment Process
           </h2>
 
-          <div className="text-center text-gray-600 text-xl space-y-4 mb-16">
+          <div className="text-center text-gray-600 text-lg space-y-4 mb-16">
             <p>
               At Callmax PH, we’ve designed our recruitment process to be efficient, transparent, and candidate-friendly—because we value your time as much as you do.
             </p>
@@ -126,7 +126,7 @@ export default function RecruitmentProcess() {
           </div>
 
           {/* DESCRIPTION */}
-          <div className="text-gray-700 text-xl space-y-4 text-center">
+          <div className="text-gray-700 text-lg space-y-4 text-center">
             <p>
               Candidates who successfully pass each stage are carefully evaluated not only based on skills, but also on their potential to thrive within our culture.
             </p>
@@ -167,11 +167,11 @@ export default function RecruitmentProcess() {
                 ⚡ 1-Day Hiring Process
               </h3>
 
-              <p className="text-gray-600 text-xl leading-relaxed">
+              <p className="text-gray-600 text-lg leading-relaxed">
                 We understand that speed matters. That’s why Callmax PH offers a streamlined hiring process where qualified candidates can complete everything—from interview to final evaluation—within a single day.
               </p>
 
-              <p className="text-gray-600 text-xl mt-4 leading-relaxed">
+              <p className="text-gray-600 text-lg mt-4 leading-relaxed">
                 This means faster feedback, quicker decisions, and the opportunity to receive a job offer without unnecessary delays.
               </p>
 
