@@ -58,7 +58,7 @@ const requirementsList = job.job_requirements
           </div>
 
           {/* SCROLLABLE CONTENT */}
-          <div className="flex-1 overflow-y-auto p-6">
+          <div className="flex-1 overflow-y-auto p-3">
 
             <span className="inline-block mb-4 text-xs text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
               {job.workSetup}
@@ -66,11 +66,11 @@ const requirementsList = job.job_requirements
 
             {/* DESCRIPTION */}
             <div className="mb-6">
-              <h3 className="font-semibold text-[#2f466f] mb-2 px-8">
+              <h3 className="font-semibold text-[#2f466f] mb-2 px-3">
                 Job Description
               </h3>
 
-              <ul className="list-disc pl-20 space-y-2 text-gray-700">
+              <ul className="list-disc px-6 md:px-16 space-y-2 text-gray-700">
                 {descriptionList.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
@@ -79,11 +79,11 @@ const requirementsList = job.job_requirements
 
             {/* REQUIREMENTS */}
             <div className="mb-6">
-              <h3 className="font-semibold text-[#2f466f] mb-2 px-8">
+              <h3 className="font-semibold text-[#2f466f] mb-2 px-3">
                 Requirements
               </h3>
 
-              <ul className="list-disc pl-20 space-y-2 text-gray-700">
+              <ul className="list-disc px-6 md:px-16 space-y-2 text-gray-700">
                 {requirementsList.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
