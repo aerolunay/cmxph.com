@@ -141,37 +141,46 @@ export default function RecruitmentProcess() {
       {/* ========================= */}
       {/* 1-DAY HIRING */}
       {/* ========================= */}
-      <section className="py-20 px-6 md:px-8 bg-white">
+      <section className="py-16 md:py-20 px-6 md:px-8 bg-white">
 
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-36 items-center">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 md:gap-20 items-center">
 
           {/* IMAGE */}
           <div className="flex justify-center md:justify-start">
             <img
               src={recruiterImg}
               alt="Recruiter"
-              className="w-full max-w-[500px] rounded-2xl shadow-lg object-cover"
+              className="
+                w-full 
+                max-w-[380px] md:max-w-[500px] 
+                rounded-2xl 
+                shadow-lg 
+                object-cover
+              "
             />
           </div>
 
           {/* TEXT CONTAINER */}
-          <div>
+          <div className="w-full">
 
             <div className="
               bg-blue-50 
               border border-blue-200 
-              p-8 rounded-2xl shadow-sm w-[500px]
+              p-6 md:p-8 
+              rounded-2xl 
+              shadow-sm 
+              w-full
             ">
 
-              <h3 className="text-2xl font-semibold text-[#2f466f] mb-3">
+              <h3 className="text-xl md:text-2xl font-semibold text-[#2f466f] mb-3 text-center md:text-left">
                 ⚡ 1-Day Hiring Process
               </h3>
 
-              <p className="text-gray-600 text-lg leading-relaxed">
+              <p className="text-gray-600 text-base md:text-lg leading-relaxed text-center md:text-left">
                 We understand that speed matters. That’s why Callmax PH offers a streamlined hiring process where qualified candidates can complete everything—from interview to final evaluation—within a single day.
               </p>
 
-              <p className="text-gray-600 text-lg mt-4 leading-relaxed">
+              <p className="text-gray-600 text-base md:text-lg mt-4 leading-relaxed text-center md:text-left">
                 This means faster feedback, quicker decisions, and the opportunity to receive a job offer without unnecessary delays.
               </p>
 

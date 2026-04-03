@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import collabImg from "../../assets/collab.png";
-import collabImgsm from "../../assets/collabsm.png";
+import collabImg from "../../assets/collab.jpg";
+import collabImgsm from "../../assets/collabsm.jpg";
 
 export default function Hero() {
   return (
@@ -8,8 +8,10 @@ export default function Hero() {
 
       {/* LEFT */}
       <div className="p-4 min-w-0">
-        <div className="inline-block border border-blue-300 text-blue-600 px-4 py-1 rounded-full md:text-lg mb-4">
-          Careers at Callmax Solutions Philippines
+        <div className="flex justify-center md:justify-start">
+          <div className="border border-blue-300 text-blue-600 px-4 py-1 rounded-full text-sm md:text-lg mb-4">
+            Careers at Callmax Solutions Philippines
+          </div>
         </div>
 
         <motion.h1

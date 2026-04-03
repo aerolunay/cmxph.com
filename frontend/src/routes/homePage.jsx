@@ -32,7 +32,7 @@ export default function Home() {
 
       {/* NAVBAR */}
       <div className="w-full bg-[#2f466f] text-white flex justify-center py-3">
-        <nav className="flex gap-10 text-sm font-medium">
+        <nav className="hidden md:flex gap-10 text-sm font-medium">
           <a href="#life-at-cmx" className="hover:text-blue-300">Life at CMX</a>
           <a href="#why-join-cmx" className="hover:text-blue-300">Why Join CMX?</a>
           <a href="#recruitment-process" className="hover:text-blue-300">Recruitment Process</a>
