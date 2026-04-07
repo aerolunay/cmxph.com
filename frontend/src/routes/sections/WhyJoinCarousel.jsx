@@ -128,12 +128,16 @@ export default function WhyJoinCarousel() {
   return (
     <section
       id="why-join-cmx"
-      className="py-16 px-3 bg-white md:h-[650px]"
+      className="relative px-3 bg-white md:h-[800px] flex items-center"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-
-      <h2 className="text-3xl md:text-4xl font-semibold text-center text-[#2f466f] mb-10">
+    <div className="w-full">
+      <h2 className="
+          absolute top-[50px] left-1/2 -translate-x-1/2
+          text-3xl md:text-4xl font-semibold text-[#2f466f]
+          text-center w-full
+        ">
         Why Join Callmax PH?
       </h2>
 
@@ -283,9 +287,10 @@ export default function WhyJoinCarousel() {
         </div>
 
       </div>
+    </div>
 
       {/* INDICATORS */}
-      <div className="flex justify-center mt-10 gap-2">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
         {slides.map((_, index) => (
           <div
             key={index}
