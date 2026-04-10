@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 import careerGrowthImg from "../../assets/careerGrowthImg.jpg";
 import supportiveLeadershipImg from "../../assets/SupportiveLeadershipImg.jpg";
@@ -7,11 +6,10 @@ import continuousLearningImg from "../../assets/continuousLearningImg.jpg";
 import employeeRecognitionImg from "../../assets/employeeRecognitionImg.jpg";
 import stableOpportunitiesImg from "../../assets/stableOpportunitiesImg.jpg";
 import workLifeBalanceImg from "../../assets/workLifeBalanceImg.jpg";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
-export default function WhyJoinCarousel() {
+export default function WhyJoinSection() {
 
-  const slides = [
+  const items = [
     {
       title: "Career Growth",
       image: careerGrowthImg,
@@ -74,232 +72,71 @@ export default function WhyJoinCarousel() {
     }
   ];
 
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [direction, setDirection] = useState(1);
-  const [isHovered, setIsHovered] = useState(false);
-
-  const isEven = currentSlide % 2 === 1;
-
-  useEffect(() => {
-    if (isHovered) return;
-
-    const interval = setInterval(() => {
-      setDirection(1);
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 15000);
-
-    return () => clearInterval(interval);
-  }, [isHovered]);
-
-  const nextSlide = () => {
-    setDirection(1);
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setDirection(-1);
-    setCurrentSlide((prev) =>
-      prev === 0 ? slides.length - 1 : prev - 1
-    );
-  };
-
-  // 🔥 SWIPE LOGIC
-  let touchStartX = 0;
-  let touchEndX = 0;
-
-  const handleTouchStart = (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  };
-
-  const handleTouchEnd = (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-
-    const threshold = 50;
-
-    if (touchStartX - touchEndX > threshold) {
-      nextSlide(); // swipe left
-    }
-
-    if (touchEndX - touchStartX > threshold) {
-      prevSlide(); // swipe right
-    }
-  };
-
   return (
     <section
       id="why-join-cmx"
-      className="relative px-3 bg-white md:h-[800px] flex items-center"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      className="bg-[#f8fafc] py-16 md:py-24 px-4 sm:px-6 md:px-10"
     >
-    <div className="w-full">
-      <h2 className="
-          absolute top-[50px] left-1/2 -translate-x-1/2
-          text-3xl md:text-4xl font-semibold text-[#2f466f]
-          text-center w-full
-        ">
-        Why Join Callmax PH?
-      </h2>
 
-      <div className="max-w-[1000px] mx-auto relative">
-
-        {/* ❌ HIDDEN ON MOBILE */}
-        {/* LEFT */}
-        <div
-          onClick={prevSlide}
-          className={`
-            hidden md:flex
-            absolute top-1/2 -translate-y-1/2 z-50
-            left-0 -translate-x-[200px]
-            w-16 h-16 items-center justify-center
-            cursor-pointer group
-            transition-all duration-300
-            ${isHovered ? "opacity-100 scale-100" : "opacity-0 scale-75"}
-          `}
-        >
-          <div className="
-            relative w-full h-full rounded-full flex items-center justify-center
-
-            bg-blue-600
-            border border-white/40
-            shadow-[0_15px_50px_rgba(37,99,235,0.6)]
-
-            group-hover:scale-110
-            group-hover:bg-blue-700
-            group-active:scale-95
-
-            transition-all duration-300
-          ">
-
-            {/* GLOW */}
-            <div className="
-              absolute inset-0 rounded-full
-              bg-blue-500 blur-2xl opacity-60
-              group-hover:opacity-90
-              transition
-            "></div>
-
-            {/* ICON (DIRECT — NO SPAN) */}
-            <ChevronLeft
-              size={30}
-              strokeWidth={3}
-              className="relative text-white"
-            />
-
-          </div>
-        </div>
-
-        {/* RIGHT */}
-        <div
-          onClick={nextSlide}
-          className={`
-            hidden md:flex
-            absolute top-1/2 -translate-y-1/2 z-50
-            right-0 translate-x-[200px]
-            w-16 h-16 items-center justify-center
-            cursor-pointer group
-            transition-all duration-300
-            ${isHovered ? "opacity-100 scale-100" : "opacity-0 scale-75"}
-          `}
-        >
-          <div className="
-            relative w-full h-full rounded-full flex items-center justify-center
-
-            bg-blue-600
-            border border-white/40
-            shadow-[0_15px_50px_rgba(37,99,235,0.6)]
-
-            group-hover:scale-110
-            group-hover:bg-blue-700
-            group-active:scale-95
-
-            transition-all duration-300
-          ">
-
-            {/* GLOW */}
-            <div className="
-              absolute inset-0 rounded-full
-              bg-blue-500 blur-2xl opacity-60
-              group-hover:opacity-90
-              transition
-            "></div>
-
-            {/* ICON */}
-            <ChevronRight
-              size={30}
-              strokeWidth={3}
-              className="relative text-white"
-            />
-
-          </div>
-        </div>
-
-        {/* CONTENT + SWIPE */}
-        <div
-          className="max-w-[1500px] mx-auto"
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
-        >
-          <div className="grid md:grid-cols-2 gap-24 items-center">
-
-            {/* IMAGE */}
-            <div className={`flex justify-center ${isEven ? "md:order-2" : "md:order-1"}`}>
-              <AnimatePresence mode="wait">
-                <motion.img
-                  key={currentSlide}
-                  src={slides[currentSlide].image}
-                  className="w-full max-w-[520px] rounded-3xl shadow-xl"
-                  initial={{ x: direction > 0 ? 120 : -120, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  exit={{ x: direction > 0 ? -120 : 120, opacity: 0 }}
-                  transition={{ duration: 0.5 }}
-                />
-              </AnimatePresence>
-            </div>
-
-            {/* TEXT */}
-            <div className={`flex justify-center text-lg ${isEven ? "md:order-1" : "md:order-2"}`}>
-              <div className="max-w-[550px] w-full text-center md:text-left">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={currentSlide + "-text"}
-                    initial={{ x: direction > 0 ? 120 : -120, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    exit={{ x: direction > 0 ? -120 : 120, opacity: 0 }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    <h3 className="text-2xl md:text-3xl font-semibold text-[#2f466f] mb-4">
-                      {slides[currentSlide].title}
-                    </h3>
-
-                    <div className="space-y-3 text-gray-700 leading-relaxed">
-                      {slides[currentSlide].content.map((p, i) => (
-                        <p key={i}>{p}</p>
-                      ))}
-                    </div>
-
-                  </motion.div>
-                </AnimatePresence>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
+      {/* HEADER */}
+      <div className="max-w-5xl mx-auto text-center mb-12 md:mb-16">
+        <h2 className="text-2xl md:text-4xl font-semibold text-[#2f466f]">
+          Why Join Callmax PH?
+        </h2>
+        <p className="text-gray-500 mt-3 text-sm md:text-base">
+          A workplace built for growth, balance, and long-term success.
+        </p>
       </div>
-    </div>
 
-      {/* INDICATORS */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
-        {slides.map((_, index) => (
-          <div
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`h-2 w-6 rounded-full cursor-pointer transition ${
-              currentSlide === index ? "bg-blue-600" : "bg-gray-300"
-            }`}
-          />
-        ))}
+      {/* CONTENT */}
+      <div className="max-w-4xl mx-auto"> {/* narrower */}
+
+        {items.map((item, index) => {
+          const reverse = index % 2 === 1;
+
+          return (
+            <motion.div
+              key={index}
+              className="grid md:grid-cols-2 gap-6 md:gap-10 items-center mb-14 md:mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4 }}
+            >
+
+              {/* IMAGE */}
+              <div className={`flex justify-center ${reverse ? "md:order-2" : ""}`}>
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="
+                    w-full 
+                    max-w-[260px] sm:max-w-[300px] md:max-w-[340px]  /* 🔥 SMALLER */
+                    rounded-xl md:rounded-2xl
+                    shadow-sm
+                    object-cover
+                    transition duration-500 hover:scale-105
+                  "
+                />
+              </div>
+
+              {/* TEXT */}
+              <div className={`text-center md:text-left ${reverse ? "md:order-1" : ""}`}>
+                <h3 className="text-xl md:text-2xl font-semibold text-[#2f466f] mb-2 md:mb-3">
+                  {item.title}
+                </h3>
+
+                <div className="space-y-2 text-gray-600 text-sm md:text-base leading-relaxed">
+                  {item.content.map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))}
+                </div>
+              </div>
+
+            </motion.div>
+          );
+        })}
+
       </div>
 
     </section>
