@@ -167,12 +167,13 @@ export default function RecruitmentProcess() {
               </h3>
 
               <p className="text-gray-600 text-sm sm:text-base leading-relaxed text-center md:text-left">
-                Qualified candidates can complete the full process—from interview to final evaluation—within a single day.
+                In a fast-moving BPO environment, we understand the importance of timely hiring. Callmax PH offers a 1-Day Hiring Process designed to accelerate candidate onboarding.
               </p>
 
               <p className="text-gray-600 text-sm sm:text-base mt-3 leading-relaxed text-center md:text-left">
-                Faster feedback, quicker decisions, and a smoother hiring experience.
+                Qualified applicants can complete interviews, assessments, and final evaluations within a single day, ensuring faster turnaround times and quicker hiring decisions.
               </p>
+              
 
             </div>
           </div>
