@@ -4,45 +4,76 @@ import collabImgsm from "../../assets/collabsm.jpg";
 
 export default function Hero() {
   return (
-    <section className="grid md:grid-cols-2 items-center px-6 py-6 md:py-12 gap-6 bg-white max-w-[1300px] mx-auto">
+    <section className="
+      grid md:grid-cols-2 items-center
+      px-4 sm:px-6 md:px-10   /* ✅ FIXED MOBILE PADDING */
+      py-6 md:py-10           /* ✅ LESS TALL */
+      gap-6 md:gap-10
+      bg-white
+      max-w-[1200px] mx-auto  /* ✅ SLIGHTLY NARROWER */
+    ">
 
       {/* LEFT */}
-      <div className="p-4 min-w-0">
+      <div className="p-2 md:p-4 min-w-0">
+
+        {/* TAG */}
         <div className="flex justify-center md:justify-start">
-          <div className="border border-blue-300 text-blue-600 px-4 py-1 rounded-full text-sm md:text-lg mb-4">
+          <div className="
+            border border-blue-300 text-blue-600
+            px-3 py-1 rounded-full
+            text-xs sm:text-sm md:text-base   /* ✅ SMALLER */
+            mb-3 md:mb-4
+          ">
             Careers at Callmax Solutions Philippines
           </div>
         </div>
 
+        {/* TITLE */}
         <motion.h1
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: -15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl lg:text-5xl font-bold leading-tight mb-6"
+          transition={{ duration: 0.5 }}
+          className="
+            text-2xl sm:text-3xl md:text-4xl lg:text-5xl   /* ✅ BALANCED */
+            font-semibold
+            leading-tight
+            mb-4 md:mb-5
+            text-center md:text-left
+          "
         >
           Build Your Career <br />
           With Purpose
         </motion.h1>
 
-        <p className="text-gray-600 text-lg mb-6 max-w-lg">
-          Join a team that values growth, innovation, and people-first culture. 
+        {/* DESCRIPTION */}
+        <p className="
+          text-gray-600
+          text-sm sm:text-base md:text-base   /* ✅ MATCH WHY JOIN */
+          mb-5 md:mb-6
+          max-w-md md:max-w-lg
+          text-center md:text-left
+        ">
+          Join a team that values growth, innovation, and people-first culture.
           At Callmax PH, we don’t just offer jobs — we build careers.
         </p>
 
-        <div className="flex flex-col lg:flex-row gap-4">
+        {/* CTA */}
+        <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+
           <button
             onClick={() => window.open("/careers/jobs", "_blank")}
-            className="bg-blue-600 text-white text-lg px-6 py-3 rounded-full hover:bg-blue-700 transition"
+            className="
+              bg-blue-600 text-white
+              text-sm md:text-base           /* ✅ SMALLER BUTTON TEXT */
+              px-5 py-2.5                    /* ✅ LESS BULKY */
+              rounded-full
+              hover:bg-blue-700
+              transition
+            "
           >
             View Open Positions
           </button>
 
-          {/* Optional secondary CTA */}
-          {/*
-          <button className="border border-gray-400 px-6 py-3 rounded-full hover:bg-gray-100 transition">
-            Submit Application
-          </button>
-          */}
         </div>
       </div>
 
@@ -56,9 +87,9 @@ export default function Hero() {
           className="
             hidden md:block
             w-full
-            max-w-[720px]
+            max-w-[520px]       /* ✅ SMALLER IMAGE */
             object-contain
-            md:translate-x-6
+            md:translate-x-4    /* ✅ LESS OFFSET */
           "
         />
 
@@ -69,7 +100,7 @@ export default function Hero() {
           className="
             block md:hidden
             w-full
-            max-w-[420px]
+            max-w-[320px]       /* ✅ SMALLER MOBILE IMAGE */
             object-contain
           "
         />
