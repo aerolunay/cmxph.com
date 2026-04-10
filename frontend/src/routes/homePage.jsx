@@ -9,6 +9,7 @@ import WhyJoinCarousel from "./sections/WhyJoinCarousel";
 import RecruitmentProcess from "./sections/RecruitmentProcess";
 import CTASection from "./sections/CTASection";
 import Footer from "./sections/Footer";
+import Chatbot from "../components/Chatbot";
 
 import { Menu, X } from "lucide-react";
 
@@ -91,6 +92,7 @@ export default function Home() {
       <RecruitmentProcess />
       <CTASection />
       <Footer />
+      <Chatbot />
 
     </div>
   );
