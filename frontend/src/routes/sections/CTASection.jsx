@@ -1,24 +1,48 @@
 export default function CTASection() {
   return (
-    <section className="py-20 text-center px-4 bg-white border-t-2 border-b-2 border-blue-300">
+    <section className="
+      py-14 md:py-20               /* ✅ LESS BULKY */
+      px-4 sm:px-6 md:px-10       /* ✅ CONSISTENT PADDING */
+      text-center
+      bg-white
+      border-t border-b border-blue-200  /* ✅ SOFTER BORDER */
+    ">
 
-      <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-[#2f466f]">
+      {/* TITLE */}
+      <h2 className="
+        text-2xl md:text-3xl       /* ✅ SMALLER */
+        font-semibold
+        mb-3 md:mb-4
+        text-[#2f466f]
+      ">
         Ready to grow your career with us?
       </h2>
 
-      <p className="text-gray-600 text-lg mb-8 max-w-xl mx-auto">
-        Take the next step and join a team that values your growth, supports your journey, and celebrates your success.
+      {/* DESCRIPTION */}
+      <p className="
+        text-gray-600
+        text-sm sm:text-base       /* ✅ MATCH WHY JOIN */
+        mb-6 md:mb-8
+        max-w-lg mx-auto
+        leading-relaxed
+      ">
+        Take the next step and join a team that values your growth,
+        supports your journey, and celebrates your success.
       </p>
 
+      {/* BUTTON */}
       <button
         onClick={() =>
           window.open("https://quickapply.cmxph.com", "_blank")
         }
         className="
-          text-lg
-          bg-blue-600 text-white px-8 py-4 rounded-full
+          text-sm md:text-base     /* ✅ SMALLER */
+          bg-blue-600 text-white
+          px-6 py-2.5              /* ✅ LESS BULKY */
+          rounded-full
           hover:bg-blue-700 hover:scale-105
-          transition-all duration-300 shadow-lg
+          transition-all duration-300
+          shadow-md                /* ✅ LIGHTER SHADOW */
         "
       >
         Apply Now
