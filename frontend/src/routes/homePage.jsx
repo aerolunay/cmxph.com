@@ -41,7 +41,10 @@ export default function Home() {
         <div className="flex items-center gap-3">
 
           {/* APPLY BUTTON */}
-          <button className="hidden md:inline-block bg-blue-900 text-white px-4 py-2 rounded-full hover:bg-blue-800 transition text-xs md:text-sm">
+          <button 
+            onClick={() =>
+            window.open("https://quickapply.cmxph.com", "_blank")}
+          className="hidden md:inline-block bg-blue-900 text-white px-4 py-2 rounded-full hover:bg-blue-800 transition text-xs md:text-sm">
             Apply Now
           </button>
 
@@ -77,11 +80,7 @@ export default function Home() {
           <a href="#why-join-cmx" onClick={() => setMenuOpen(false)} className="block">Why Join CMX?</a>
           <a href="#recruitment-process" onClick={() => setMenuOpen(false)} className="block">Recruitment Process</a>
           <a href="#contact-us" onClick={() => setMenuOpen(false)} className="block">Contact Us</a>
-
-          <button className="w-full mt-3 bg-white text-[#2f466f] py-2 rounded-full font-medium text-sm">
-            Apply Now
-          </button>
-
+          <a href="#applynow" onClick={() => window.open("https://quickapply.cmxph.com", "_blank")} className="block">Apply Now</a>
         </div>
       )}
 

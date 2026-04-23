@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
-
+import api from "../api/axiosInstance";
 import logo from "../assets/cmxlogo.png";
 import phFlag from "../assets/phFlag.png";
 import JobDetailsModal from "../components/JobDetailsModal";
@@ -16,13 +15,19 @@ export default function CareersJobs() {
 
   const fetchJobs = async () => {
     try {
-      const res = await axios.get("/api/recruitment/jobs");
+      const res = await api.get("/recruitment/jobs");
 
       if (res.data.success) {
         setJobs(res.data.data);
       }
     } catch (err) {
-      console.error("Error fetching jobs:", err);
+      if (err.response) {
+        console.error("API Error:", err.response.status, err.response.data);
+      } else if (err.request) {
+        console.error("No response from server");
+      } else {
+        console.error("Request error:", err.message);
+      }
     } finally {
       setLoading(false);
     }
